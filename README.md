@@ -67,4 +67,29 @@ http://localhost:4000/contact/create
 - create a new Contact row with linkPrecedence="primary" and treat it as a new customer, then return it with an empty array for secondaryContactIds
 - When an incoming request has either a phoneNumber or an email that matches an existing contact but contains new information, the service will create a "secondary" contact.
 - If more than one "primary" contact remains in the `contact` for the same request payload, the rule dictates that the oldest one will be the primary contact.
--
+
+## Folder Structure
+
+#### `config`
+
+Contains one-time configuration including database and response codes
+
+#### `global`
+
+Cross-functional modules that can be used across applications
+
+#### `src`
+
+Contains independent modules
+
+#### `.env`
+
+Environment configuration including port number, database connection URL, secret credentials etc.
+
+#### `app.js`
+
+The main file contains the important configurations to run the app. This file helps to run the entire application.
+
+#### `package.json`
+
+Manages the list of installed Node modules
